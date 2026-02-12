@@ -45,7 +45,7 @@ const Contact = () => {
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-5 gap-12">
+                <div className="grid md:grid-cols-5 gap-8 md:gap-12">
                     {/* Contact Info */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -58,7 +58,7 @@ const Contact = () => {
                             <div className="space-y-4 text-text-muted">
                                 <p>Je suis actuellement disponible pour des projets freelance et des opportunités à temps plein.</p>
                                 <p>Basé à : <span className="text-white">Douala, Cameroun</span></p>
-                                <p>Email : <a href="mailto:sintchenfeuzidane@gmail.com" className="text-accent-primary hover:underline">Sintchenfeuzidane@gmail.com</a></p>
+                                <p>Email : <a href="mailto:sintchenfeuzidane@gmail.com" className="text-accent-primary hover:underline break-all">Sintchenfeuzidane@gmail.com</a></p>
                             </div>
                         </div>
                     </motion.div>
@@ -70,7 +70,7 @@ const Contact = () => {
                         viewport={{ once: true }}
                         className="md:col-span-3"
                     >
-                        <form onSubmit={handleSubmit} className="space-y-6 bg-dark-card p-8 rounded-2xl border border-white/5 shadow-lg">
+                        <form onSubmit={handleSubmit} className="space-y-6 bg-dark-card p-6 md:p-8 rounded-2xl border border-white/5 shadow-lg">
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-text-muted mb-2">Nom Complet</label>
                                 <div className="relative">
@@ -125,7 +125,7 @@ const Contact = () => {
                             <button
                                 type="submit"
                                 disabled={status === 'sending'}
-                                className={`w-full py-4 rounded-lg font-bold text-white transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2
+                                className={`w-full py-4 rounded-lg font-bold text-white transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 tap-target
                                     ${status === 'success' ? 'bg-green-600' : 'bg-gradient-to-r from-primary to-accent-secondary hover:shadow-lg hover:shadow-primary/25'}
                                 `}
                             >

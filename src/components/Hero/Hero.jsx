@@ -27,19 +27,19 @@ const Hero = () => {
             <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-primary/20 blur-[120px] animate-pulse"></div>
             <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-accent-secondary/20 blur-[120px] animate-pulse" style={{ animationDelay: '2s' }}></div>
 
-            <div className="container mx-auto px-6 md:px-12 z-10 grid md:grid-cols-2 gap-12 items-center">
+            <div className="container mx-auto px-4 md:px-12 z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                 {/* Text Content */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="text-center md:text-left"
+                    className="text-center md:text-left mt-10 md:mt-0"
                 >
-                    <h2 className="text-accent-primary font-mono text-lg mb-4">Bonjour, je suis</h2>
-                    <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
+                    <h2 className="text-accent-primary font-mono text-base md:text-lg mb-4">Bonjour, je suis</h2>
+                    <h1 className="text-4xl md:text-7xl font-bold text-white mb-4 leading-tight">
                         Kouokam <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent-secondary">Zidane</span>
                     </h1>
-                    <h2 className="text-2xl md:text-3xl text-text-muted mb-8 font-light h-16 md:h-auto">
+                    <h2 className="text-xl md:text-3xl text-text-muted mb-6 md:mb-8 font-light h-16 md:h-auto min-h-[3rem]">
                         <Typewriter text="Data Analyst & Développeur Web" delay={50} />
                         <motion.span
                             animate={{ opacity: [0, 1, 0] }}
@@ -49,16 +49,16 @@ const Hero = () => {
                             |
                         </motion.span>
                     </h2>
-                    <p className="text-text-muted text-lg mb-10 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                    <p className="text-text-muted text-base md:text-lg mb-8 md:mb-10 max-w-lg mx-auto md:mx-0 leading-relaxed">
                         Je transforme des données complexes en insights clairs et je construis des expériences web modernes et performantes.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <Link to="projects" smooth={true} duration={500}>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start w-full sm:w-auto">
+                        <Link to="projects" smooth={true} duration={500} className="w-full sm:w-auto">
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-lg font-medium flex items-center justify-center gap-2 shadow-lg shadow-primary/25 transition-all"
+                                className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-primary-dark text-white rounded-lg font-medium flex items-center justify-center gap-2 shadow-lg shadow-primary/25 transition-all"
                             >
                                 Voir mes projets <HiArrowRight />
                             </motion.button>
@@ -69,7 +69,7 @@ const Hero = () => {
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-8 py-4 bg-white/5 border border-white/10 hover:bg-white/10 text-white rounded-lg font-medium flex items-center justify-center gap-2 backdrop-blur-sm transition-all cursor-pointer"
+                            className="w-full sm:w-auto px-8 py-4 bg-white/5 border border-white/10 hover:bg-white/10 text-white rounded-lg font-medium flex items-center justify-center gap-2 backdrop-blur-sm transition-all cursor-pointer"
                         >
                             Télécharger CV <HiDownload />
                         </motion.a>
@@ -81,9 +81,9 @@ const Hero = () => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative flex justify-center"
+                    className="relative flex justify-center mt-8 md:mt-0"
                 >
-                    <div className="relative w-72 h-72 md:w-96 md:h-96">
+                    <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
                         {/* Rotating Ring */}
                         <div className="absolute inset-0 border-2 border-dashed border-white/20 rounded-full animate-[spin_10s_linear_infinite]"></div>
 
@@ -107,18 +107,18 @@ const Hero = () => {
                         <motion.div
                             animate={{ y: [0, -10, 0] }}
                             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                            className="absolute top-10 -right-4 bg-dark-card/90 backdrop-blur-md border border-white/10 p-3 rounded-lg shadow-xl flex items-center gap-3"
+                            className="absolute top-4 sm:top-10 -right-2 sm:-right-4 bg-dark-card/90 backdrop-blur-md border border-white/10 p-2 sm:p-3 rounded-lg shadow-xl flex items-center gap-2 sm:gap-3"
                         >
-                            <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
-                            <span className="text-sm font-semibold text-white">Open to Work</span>
+                            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500 animate-pulse"></div>
+                            <span className="text-xs sm:text-sm font-semibold text-white">Open to Work</span>
                         </motion.div>
 
                         <motion.div
                             animate={{ y: [0, -10, 0] }}
                             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
-                            className="absolute bottom-10 -left-8 bg-dark-card/90 backdrop-blur-md border border-white/10 p-3 rounded-lg shadow-xl"
+                            className="absolute bottom-4 sm:bottom-10 -left-6 sm:-left-8 bg-dark-card/90 backdrop-blur-md border border-white/10 p-2 sm:p-3 rounded-lg shadow-xl"
                         >
-                            <span className="text-sm font-bold text-accent-primary">React & Python</span>
+                            <span className="text-xs sm:text-sm font-bold text-accent-primary">React & Python</span>
                         </motion.div>
                     </div>
                 </motion.div>

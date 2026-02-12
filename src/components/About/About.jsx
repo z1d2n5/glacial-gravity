@@ -65,9 +65,9 @@ const About = () => {
                             j'apporte une approche méthodique et orientée solutions à chaque projet.
                         </p>
 
-                        <div className="grid grid-cols-3 gap-6 mb-8">
+                        <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mb-8 text-center sm:text-left">
                             {stats.map((stat, index) => (
-                                <div key={index} className="text-center md:text-left">
+                                <div key={index} className="p-4 bg-white/5 rounded-lg border border-white/5 sm:bg-transparent sm:border-0 sm:p-0">
                                     <h4 className="text-3xl font-bold text-accent-primary mb-1">{stat.value}</h4>
                                     <p className="text-sm text-text-muted">{stat.label}</p>
                                 </div>

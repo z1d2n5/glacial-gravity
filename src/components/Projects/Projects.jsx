@@ -28,12 +28,12 @@ const Projects = () => {
                     </p>
 
                     {/* Filter Buttons */}
-                    <div className="flex justify-center flex-wrap gap-4">
+                    <div className="flex justify-center flex-wrap gap-2 md:gap-4 overflow-x-auto pb-2 px-4 scrollbar-hide">
                         {categories.map(cat => (
                             <button
                                 key={cat}
                                 onClick={() => setFilter(cat)}
-                                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 border ${filter === cat
+                                className={`px-4 md:px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 border whitespace-nowrap ${filter === cat
                                         ? 'bg-primary text-white border-primary shadow-lg shadow-primary/25'
                                         : 'bg-dark-card text-text-muted border-white/5 hover:border-white/20 hover:text-white'
                                     }`}
@@ -46,7 +46,7 @@ const Projects = () => {
 
                 <motion.div
                     layout
-                    className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                    className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
                 >
                     <AnimatePresence>
                         {filteredProjects.map((project) => (

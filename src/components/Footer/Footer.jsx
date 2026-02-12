@@ -8,8 +8,8 @@ const Footer = () => {
     return (
         <footer className="bg-dark-card border-t border-white/5 pt-16 pb-8">
             <div className="container mx-auto px-6 md:px-12">
-                <div className="grid md:grid-cols-4 gap-12 mb-12">
-                    <div className="col-span-2">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-12 text-center md:text-left">
+                    <div className="col-span-1 md:col-span-2 flex flex-col items-center md:items-start">
                         <h2 className="text-2xl font-bold font-mono text-white mb-4">
                             <span className="text-accent-primary">&lt;</span>
                             KZ
@@ -30,7 +30,7 @@ const Footer = () => {
                                     href={social.href}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="w-10 h-10 rounded-full bg-dark flex items-center justify-center text-text-muted hover:bg-primary hover:text-white transition-all duration-300"
+                                    className="w-12 h-12 rounded-full bg-dark flex items-center justify-center text-text-muted hover:bg-primary hover:text-white transition-all duration-300"
                                 >
                                     {social.icon}
                                 </a>
@@ -40,14 +40,14 @@ const Footer = () => {
 
                     <div>
                         <h3 className="text-white font-bold mb-6">Liens Rapides</h3>
-                        <ul className="space-y-3">
+                        <ul className="space-y-4">
                             {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
                                 <li key={item}>
                                     <Link
                                         to={item.toLowerCase()}
                                         smooth={true}
                                         duration={500}
-                                        className="text-text-muted hover:text-white cursor-pointer transition-colors"
+                                        className="text-text-muted hover:text-white cursor-pointer transition-colors p-2 inline-block"
                                     >
                                         {item}
                                     </Link>
@@ -58,7 +58,7 @@ const Footer = () => {
 
                     <div>
                         <h3 className="text-white font-bold mb-6">Contact</h3>
-                        <ul className="space-y-3 text-text-muted">
+                        <ul className="space-y-4 text-text-muted">
                             <li>Douala, Cameroun</li>
                             <li>sintchenfeuzidane@gmail.com</li>
                             <li>+237 656871325</li>
@@ -66,7 +66,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-text-muted">
+                <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-text-muted text-center md:text-left">
                     <p>&copy; {currentYear} Kouokam Zidane. Tous droits réservés.</p>
                     <p>Conçu et développé avec React & Tailwind</p>
                 </div>

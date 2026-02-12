@@ -61,8 +61,8 @@ const Navbar = () => {
                 </ul>
 
                 {/* Mobile Hamburger */}
-                <div className="md:hidden text-white cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
-                    {isOpen ? <HiX size={28} /> : <HiMenuAlt3 size={28} />}
+                <div className="md:hidden text-white cursor-pointer p-2 z-50 relative" onClick={() => setIsOpen(!isOpen)}>
+                    {isOpen ? <HiX size={30} /> : <HiMenuAlt3 size={30} />}
                 </div>
             </div>
 
@@ -70,22 +70,25 @@ const Navbar = () => {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-primary/95 backdrop-blur-xl border-t border-white/10 overflow-hidden"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.3 }}
+                        className="absolute top-0 left-0 w-full min-h-screen bg-dark/95 backdrop-blur-xl border-b border-white/10 flex flex-col justify-center items-center md:hidden"
                     >
-                        <ul className="flex flex-col items-center py-8 space-y-6">
+                        <ul className="flex flex-col items-center space-y-8">
                             {navLinks.map((link) => (
                                 <li key={link.name}>
                                     <Link
                                         to={link.to}
                                         smooth={true}
                                         duration={500}
+                                        offset={-80}
                                         onClick={() => setIsOpen(false)}
-                                        className="text-lg font-medium text-white hover:text-accent-primary transition-colors cursor-pointer"
+                                        className="text-2xl font-medium text-white hover:text-accent-primary transition-colors cursor-pointer relative group p-4"
                                     >
                                         {link.name}
+                                        <span className="absolute bottom-2 left-1/2 -translate-x-1/2 w-0 h-1 bg-accent-primary transition-all duration-300 group-hover:w-1/2"></span>
                                     </Link>
                                 </li>
                             ))}
