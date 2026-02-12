@@ -1,0 +1,25 @@
+[36mvite v5.4.21 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 457 modules transformed.
+[31mx[39m Build failed in 1.66s
+[31merror during build:
+[31msrc/components/Skills/Skills.jsx (4:34): "SiPowerbi" is not exported by "node_modules/react-icons/si/index.mjs", imported by "src/components/Skills/Skills.jsx".[31m
+file: [36mC:/Users/sintc/.gemini/antigravity/playground/glacial-gravity/src/components/Skills/Skills.jsx:4:34[31m
+[33m
+2: import { motion } from 'framer-motion';
+3: import { FaReact, FaPython, FaDatabase, FaNodeJs, FaHtml5, FaCss3Alt, FaTable } from 'react-icons/fa';
+4: import { SiTailwindcss, SiPandas, SiPowerbi, SiJavascript, SiTypescript } from 'react-icons/si';
+                                     ^
+5: 
+6: const skillsData = {
+[31m
+    at getRollupError (file:///C:/Users/sintc/.gemini/antigravity/playground/glacial-gravity/node_modules/rollup/dist/es/shared/parseAst.js:402:41)
+    at error (file:///C:/Users/sintc/.gemini/antigravity/playground/glacial-gravity/node_modules/rollup/dist/es/shared/parseAst.js:398:42)
+    at Module.error (file:///C:/Users/sintc/.gemini/antigravity/playground/glacial-gravity/node_modules/rollup/dist/es/shared/node-entry.js:17040:16)
+    at Module.traceVariable (file:///C:/Users/sintc/.gemini/antigravity/playground/glacial-gravity/node_modules/rollup/dist/es/shared/node-entry.js:17452:29)
+    at ModuleScope.findVariable (file:///C:/Users/sintc/.gemini/antigravity/playground/glacial-gravity/node_modules/rollup/dist/es/shared/node-entry.js:15070:39)
+    at Identifier.bind (file:///C:/Users/sintc/.gemini/antigravity/playground/glacial-gravity/node_modules/rollup/dist/es/shared/node-entry.js:5447:40)
+    at CallExpression.bind (file:///C:/Users/sintc/.gemini/antigravity/playground/glacial-gravity/node_modules/rollup/dist/es/shared/node-entry.js:2825:28)
+    at CallExpression.bind (file:///C:/Users/sintc/.gemini/antigravity/playground/glacial-gravity/node_modules/rollup/dist/es/shared/node-entry.js:12179:15)
+    at Property.bind (file:///C:/Users/sintc/.gemini/antigravity/playground/glacial-gravity/node_modules/rollup/dist/es/shared/node-entry.js:2829:23)
+    at ObjectExpression.bind (file:///C:/Users/sintc/.gemini/antigravity/playground/glacial-gravity/node_modules/rollup/dist/es/shared/node-entry.js:2825:28)[39m
